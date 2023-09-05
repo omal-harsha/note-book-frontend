@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import { Register } from './pages/Register';
+import ProtectedRoute from './component/ProtectedRoute';
 
 const LayOut = () => {
   return(
@@ -17,10 +18,10 @@ const LayOut = () => {
     </>
   )
 }
-//<Footer/>
 
 function App() {
 
+  //create a routes
   const router = createBrowserRouter([
       {
         path: "/login",
@@ -32,7 +33,10 @@ function App() {
         children: [
           {
             path:"/",
-            element: <Home/>
+            element: <ProtectedRoute>
+            <Home/>
+          </ProtectedRoute> 
+              
           }
         ]
       },
