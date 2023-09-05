@@ -27,9 +27,9 @@ export const Header = () => {
     
 
   return (
-    <div className={`h-28  ${darkmode ? "bg-blue-400" : "bg-[#0f2231]"}  duration-300 flex px-44 items-center justify-between`}>
+    <div className={`h-28  ${darkmode ? "bg-blue-400" : "bg-[#0f2231]"}  duration-300 flex sm:px-10 md:px-12 lg:px-44 items-center justify-between`}>
             <div className=''>
-                <h1 className={`text-4xl font-bold text-${darkmode ? "black" : "white"} font-poppins`}>Note Book</h1>
+                <h1 className={`text-2xl md:text-4xl font-bold text-${darkmode ? "black" : "white"} font-poppins`}>Note Book</h1>
             </div>
             <div className='space-x-4 flex items-center'>
                 <div className='flex space-x-4 items-center'>
@@ -44,9 +44,9 @@ export const Header = () => {
                     </>
                 )} 
                 {user && (
-                    <div className='flex items-end space-x-4'>
-                        <h1 className={`text-${darkmode ? "black" : "white"} font-semibold`}>Hi {username}</h1>
-                        <button className='px-3 py-1 hover:bg-gray-900 border bg-gray-700 text-white border-gray-500 rounded-lg font-poppins hover:text-white text-xl font-semibold duration-300 ease-in-out' onClick={logout}>Logout</button>
+                    <div className='flex sm:flex-col md:flex-row items-center sm:mb-2 md:mb-0 md:items-end space-x-4 sm:mr-10'>
+                        <h1 className={`text-${darkmode ? "black" : "white"} sm:text-xs md:text-base md:font-semibold sm:mb-2 md:mb-0`}>Hi {username}</h1>
+                        <button className='px-3 py-1 hover:bg-gray-900 border bg-gray-700 text-white border-gray-500 rounded-lg font-poppins hover:text-white md:text-xl font-semibold duration-300 ease-in-out' onClick={logout}>Logout</button>
                     </div>
                 )}
                 </div>
