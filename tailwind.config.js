@@ -13,10 +13,10 @@ module.exports = {
       'sm': '300px',
       // => @media (min-width: 300px) { ... }
 
-      'md': '1080px',
+      'md': '500px',
       // => @media (min-width: 1080px) { ... }
 
-      'lg': '1370px',
+      'lg': '1080px',
       // => @media (min-width: 1370px) { ... }
     },
   },

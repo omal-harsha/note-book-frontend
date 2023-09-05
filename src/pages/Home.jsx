@@ -92,7 +92,7 @@ const changePage = ({ selected }) => {
 
   return (
 
-    <div className={`${!darkMode ? "bg-[#161727]" : "bg-gray-100"}  py-8  flex flex-col items-center font-poppins duration-1000`}>
+    <div className={`${!darkMode ? "bg-[#161727]" : "bg-gray-100"}  py-8  flex flex-col items-center font-poppins duration-1000 px-5`}>
         
         <div className={`cursor-pointer absolute right-8 top-12 hover:scale-110 duration-300 ease-in-out text-3xl text-white`} onClick={changeTheme}>
                     <UilBrightnessHalf className='scale-125'/>
@@ -100,7 +100,7 @@ const changePage = ({ selected }) => {
 
         {/* ------------------------Search bar------------------------------ */}
 
-        <div className="flex justify-between items-center my-10 py-2 rounded-full bg-white md:mx-auto shadow-lg md:w-[600px] sm:mx-10 ">
+        <div className="flex justify-between items-center my-10 py-2  rounded-full bg-white shadow-lg w-full max-w-2xl">
             <UilSearch className="ml-4 text-gray-500"/>
             <input type="text" className="py-1 px-2 w-full ml-3 focus:outline-none text-lg font-poppins" placeholder="Search by Title..."/>
             <p className="bg-blue-500 hover:bg-blue-400 cursor-pointer duration-300 hover:scale-105 font-bold text-white font-OpenSans px-5 py-1.5 rounded-full mx-2">Search</p>
@@ -108,23 +108,23 @@ const changePage = ({ selected }) => {
 
         {/* ---------------------------------------------------------------- */}
 
-        <button className='px-4 py-2 bg-[#3f3f3f] font-bold hover:shadow-lg hover:scale-105 duration-300 ease-in-out text-white rounded-lg border-black border' onClick={() => {setAddPopUp(true)}}>ADD NEW NOTE</button>
+        <button className='px-4 py-2 bg-[#3f3f3f] text-sm md:text-base md:font-bold hover:shadow-lg hover:scale-105 duration-300 ease-in-out text-white rounded-lg border-black border' onClick={() => {setAddPopUp(true)}}>ADD NEW NOTE</button>
 
         {/*-------------- note card---------------- */} 
         { notes.slice(pagesVisited,pagesVisited + usersPerPage).map((note) => (
 
-        <div key={note._id} className={`${!darkMode ? "bg-[#929292]" : "bg-blue-100"} px-10 py-8 rounded-lg w-full max-w-lg space-y-3 my-3 shadow-lg`}>
+        <div key={note._id} className={`${!darkMode ? "bg-[#929292]" : "bg-blue-100"} px-4 md:px-10 py-5 md:py-8 rounded-lg w-full max-w-lg md:space-y-3 space-y-1 my-3 shadow-lg`}>
             <div className='flex justify-between'>
-                <h1 className='text-2xl font-semibold'>{note.title}</h1>
-                    <div className={`flex text-sm font-semibold ${!darkMode ? "text-gray-200" : "text-gray-400"}  space-x-2  justify-center`}>
+                <h1 className='text-base md:text-2xl font-semibold'>{note.title}</h1>
+                    <div className={`flex md:flex-row sm:flex-col items-end text-xs md:text-sm md:font-semibold ${!darkMode ? "text-gray-200" : "text-gray-400"}  space-x-2  justify-center`}>
                         <h1>{note.category}</h1>
-                        <p>|</p>
+                        <p className='hidden md:flex'>|</p>
                         <h1>{note.date}</h1>
                     </div>
             </div>
             <div className='flex justify-between'>
-                <p className={`w-full max-w-lg ${!darkMode ? "text-white" : "text-gray-600"}`}>{truncateNote(note.note,35)}</p>
-                <button onClick={() => {setSelectedNoteId(note._id);setPopUp(!popUp)}}  className={`px-3 py-1 ${!darkMode ? "bg-blue-600" : "bg-blue-400"} rounded-lg text-white font-semibold text-sm hover:scale-105 duration-300 ease-in-out hover:shadow-md`}>View</button>
+                <p className={`w-full sm:text-xs flex flex-wrap md:text-base max-w-lg ${!darkMode ? "text-white" : "text-gray-600"}`}>{truncateNote(note.note,35)}</p>
+                <button onClick={() => {setSelectedNoteId(note._id);setPopUp(!popUp)}}  className={`px-3 py-1 ${!darkMode ? "bg-blue-600" : "bg-blue-400"} rounded-lg text-white font-semibold text-xs md:text-sm hover:scale-105 duration-300 ease-in-out hover:shadow-md`}>View</button>
 
                 
             </div>
