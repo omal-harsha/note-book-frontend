@@ -19,7 +19,7 @@ This repository contains the frontend code for a notebook application developed 
 + Yup and Formik: These libraries are used for form validation and management, ensuring data integrity and user-friendly form interactions.
 
 + Login
-![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/78cf3293-4d71-4ba4-95be-3eda55618ca8
+![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/434bbcc7-cf57-4f12-8aeb-427552ffbe1d)
 + Home
 ![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/9b53608c-4ecf-4de2-ad6e-2b2394648540)
 + Add note
