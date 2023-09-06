@@ -52,15 +52,15 @@ export const Login = () => {
 
   return (
     <div>
-        <div className='flex p-20 h-screen bg-blue-100 justify-center font-poppins'>
-            <div className=' bg-white shadow-xl rounded-l-3xl flex items-center justify-center'>
+        <div className='flex p-10 lg:p-20 h-screen bg-blue-100 justify-center font-poppins'>
+            <div className=' hidden lg:flex bg-white shadow-xl rounded-l-3xl items-center justify-center'>
                 <img src='https://firebasestorage.googleapis.com/v0/b/blogsite-33dcd.appspot.com/o/images%2Fnotebook.jpg?alt=media&token=35513b94-7783-42fc-ab0d-f4afc6633872' className='w-full max-w-xl'/>
             </div>
-            <div className=' bg-gray-200 shadow-xl rounded-r-3xl px-32 items-center flex'>
-                <div className='items-center '>
+            <div className=' bg-gray-200 shadow-xl rounded-r-3xl sm:w-full md:w-auto md:px-20 lg:px-32 items-center flex'>
+                <div className='items-center text-center mx-auto'>
                     <h1 className='text-3xl font-semibold mb-10'>Login</h1>
 
-                    <form onSubmit={handleSubmit} className='space-y-5 w-full max-w-2xl'>
+                    <form onSubmit={handleSubmit} className='space-y-5 w-full '>
 
                     <div>
                       <input 
@@ -91,7 +91,7 @@ export const Login = () => {
                     <button type='submit' className='w-full max-w-lg py-2 bg-[#0E86D4] hover:bg-[#56b9e7] shadow-lg shadow-[#7eb3d6] rounded-lg text-white font-bold '>LOGIN</button>
                     </form>
                     <p className='text-red-600 text-center mt-3'> {errMsg} </p>
-                    <p className='text-center group text-sm cursor-pointer duration-300 mt-5'>Already have an account? <span className='underline group-hover:text-blue-700' onClick={()=> navigate("/register")}> Login </span></p>
+                    <p className='text-center group text-sm cursor-pointer duration-300 mt-5'>Don't you have an account? <span className='underline group-hover:text-blue-700' onClick={()=> navigate("/register")}> Register </span></p>
                 </div>
             </div>
         </div>
