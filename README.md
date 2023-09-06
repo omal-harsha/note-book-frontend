@@ -17,3 +17,14 @@ This repository contains the frontend code for a notebook application developed 
 + React Paginate: Used for pagination of notes or other content.
 + React Toastify: Provides notifications and toast messages for user interactions.
 + Yup and Formik: These libraries are used for form validation and management, ensuring data integrity and user-friendly form interactions.
+
++ Login
+![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/78cf3293-4d71-4ba4-95be-3eda55618ca8
++ Home
+![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/9b53608c-4ecf-4de2-ad6e-2b2394648540)
++ Add note
+![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/afcbe800-8d54-41fc-911b-e9aa2b607ddc)
++ View note
+![image](https://github.com/omal-harsha/note-book-frontend/assets/69068196/c4a6f30b-f3f9-4698-8398-54b5cb10d3dc)
+
+
