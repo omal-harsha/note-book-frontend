@@ -92,7 +92,7 @@ export const Register = () => {
                     <button type='submit' className='w-full max-w-lg py-2 bg-[#0E86D4] hover:bg-[#56b9e7] shadow-lg shadow-[#7eb3d6] rounded-lg text-white font-bold '>REGISTER</button>
                     </form>
                     <p className='text-red-600 text-center mt-3'> {errMsg} </p>
-                    <p className='text-center group text-sm cursor-pointer duration-300 mt-5'>Already have an account? <span className='underline group-hover:text-blue-700' onClick={()=> navigate("/login")}> Login </span></p>
+                    <p className='text-center text-blue-500 group text-sm cursor-pointer duration-300 mt-5'>Already have an account? <span className='underline group-hover:text-blue-700' onClick={()=> navigate("/login")}> Login </span></p>
                 </div>
             </div>
         </div>
