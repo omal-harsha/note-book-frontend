@@ -75,17 +75,17 @@ export const SingleNote = ({noteId,controlPopUp}) => {
 
   return (
     <div className='h-screen flex justify-center z-[500] items-center fixed top-0 left-1/2 transform -translate-x-1/2  w-screen'>
-        <div className='flex backdrop-blur-lg  backdrop-filter flex-col  w-full max-w-2xl px-8 min-h-[350px] rounded-lg shadow-xl bg-gray-400/50 py-8 font-poppins'>
+        <div className='flex backdrop-blur-lg  backdrop-filter flex-col mx-2 w-full max-w-2xl px-8 min-h-[350px] rounded-lg shadow-xl bg-gray-400/50 py-8 font-poppins'>
            <ToastContainer />
-            <div className={`text-3xl font-bold text-black mb-1 flex justify-between`}>
+            <div className={`text-lg md:text-3xl font-bold text-black mb-1 flex justify-between`}>
                 <h1>{notes.title}</h1>
                 <div className='flex -mt-2 -mr-2'>
-                    <p className='text-sm text-gray-600 mr-2'>{notes.date}</p>
+                    <p className='text-[10px] md:text-sm text-gray-600 mr-2'>{notes.date}</p>
                     <div className='cursor-pointer hover:scale-105 ' onClick={()=> controlPopUp(false)}> <UilMultiply/> </div>
                 </div>
             </div>
             <p className='text-xs mb-5'>({notes.category})</p>
-            <p className='text-sm'>{notes.note}</p>
+            <p className='text-xs md:text-sm'>{notes.note}</p>
 
             <div className='flex space-x-4 absolute bottom-5 right-10'>
                 <button onClick={deleteNote} className='px-2 py-1 bg-red-700 hover:bg-red-600 font-semibold text-white rounded-md flex'> <UilTrashAlt className= "scale-75 mr-1" /> Delete</button>

@@ -84,16 +84,16 @@ export const AddNote = ({controlPopUp}) => {
     <div className='h-screen flex justify-center z-[500] items-center fixed top-0 left-1/2 transform -translate-x-1/2  w-screen'>
         <ToastContainer />
             <form onSubmit={handleSubmit}
-            className='flex backdrop-blur-lg  backdrop-filter flex-col  w-full max-w-2xl px-8 min-h-[430px] rounded-lg shadow-xl bg-gray-600/50 py-8 font-poppins'>
+            className='flex backdrop-blur-lg  backdrop-filter flex-col  w-full max-w-2xl mx-2 px-4 md:px-8 min-h-[430px] rounded-lg shadow-xl bg-gray-600/50 py-8 font-poppins'>
 
                 {/* ------------------------------ Title ------------------------------------- */}
 
-                <div className={`text-3xl font-bold text-black mb-1 flex justify-between`}>
+                <div className={`text-xl md:text-3xl font-bold text-black mb-1 flex justify-between`}>
                     <div className='flex flex-col'>
                         <input value={values.title} 
                         name='title' 
                         placeholder='Title' 
-                        className='px-1 focus:outline-none rounded-lg bg-gray-200' 
+                        className='px-1 focus:outline-none rounded-lg bg-gray-200 w-full' 
                         maxLength={15} 
                         onChange={handleChange}
                          />
@@ -108,13 +108,13 @@ export const AddNote = ({controlPopUp}) => {
                 {/* ------------------------------ category Dropdown ------------------------------------- */}
 
                 <div className='flex space-x-2  mt-2 items-center mb-5 bg-gray-200 rounded-lg pl-2 w-max'>
-                    <p className='text-sm'>Category:</p>
+                    <p className=' text-xs md:text-sm'>Category:</p>
                         <select
                         id="selectOption"
                         name="category"
                         value={values.category}
                         onChange={handleChange}
-                        className='rounded-lg focus: outline-none'
+                        className='rounded-lg focus: outline-none text-xs md:text-sm'
                         >
                             <option value="" disabled>Please select</option>
                             <option value="Personal">Personal</option>

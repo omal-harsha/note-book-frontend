@@ -47,12 +47,12 @@ export const Update = ({note,updatePopUp,controlPopUp}) => {
 
   return (
     <div className='h-screen flex justify-center z-[500] items-center fixed top-0 left-1/2 transform -translate-x-1/2  w-screen'>
-        <div className='flex backdrop-blur-lg  backdrop-filter flex-col  w-full max-w-2xl px-8 min-h-[430px] rounded-lg shadow-xl bg-gray-400/50 py-8 font-poppins'>
+        <div className='flex backdrop-blur-lg  backdrop-filter flex-col  w-full max-w-2xl mx-2 px-4 md:px-8 min-h-[430px] rounded-lg shadow-xl bg-gray-400/50 py-8 font-poppins'>
             <ToastContainer />
-            <div className={`text-3xl font-bold text-black mb-1 flex justify-between`}>
+            <div className={`text-lg md:text-3xl font-bold text-black mb-1 flex justify-between`}>
                 <input value={editNote.title} name='title' placeholder='Title' className='px-1 focus:outline- rounded-lg bg-gray-200' maxLength={25} onChange={handleChange}/>
-                <div className='flex -mt-2 -mr-2'>
-                    <p className='text-sm text-gray-600 mr-2'> {editNote.date}</p>
+                <div className='flex md:flex-row flex-col items-end -mt-2 -mr-2'>
+                    <p className='text-[10px] md:text-sm text-gray-600 mr-2'> {editNote.date}</p>
                 <div className='cursor-pointer hover:scale-105 ' onClick={ () => {updatePopUp(false); controlPopUp(false)}}> <UilMultiply/> </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ export const Update = ({note,updatePopUp,controlPopUp}) => {
                     name="category"
                     value={editNote.category}
                     onChange={handleChange}
-                    className='rounded-lg focus: outline-none'
+                    className='rounded-lg focus: outline-none w-full'
                     >
                     <option value="" disabled>Please select</option>
                     <option value="Personal">Personal</option>
