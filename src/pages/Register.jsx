@@ -53,7 +53,7 @@ export const Register = () => {
       console.log(errors)
   return (
     <div>
-        <div className='flex p-10 lg:p-20 h-screen bg-blue-100 justify-center font-poppins'>
+        <div className='flex  h-screen bg-blue-100 justify-center font-poppins'>
             <div className=' hidden lg:flex bg-white shadow-xl rounded-l-3xl items-center justify-center'>
                 <img src='https://firebasestorage.googleapis.com/v0/b/blogsite-33dcd.appspot.com/o/images%2Fnotebook.jpg?alt=media&token=35513b94-7783-42fc-ab0d-f4afc6633872' className='w-full max-w-xl'/>
             </div>
