@@ -1,6 +1,6 @@
 # note-book-frontend
 
-hosted url - https://note-book-backend-umber.vercel.app/  (but it's not connect with frontend)
+backend repo - https://github.com/omal-harsha/note-book-backend
 
 Frontend hosted Url - https://note-book-frontend.vercel.app/login  (but it's not connected with the backend)
 
